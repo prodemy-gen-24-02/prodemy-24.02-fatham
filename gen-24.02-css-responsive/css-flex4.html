@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United By Blue</title>
+
+    <!-- <link rel="stylesheet" href="header2.css"> -->
+
+    <style>
+    .catalog-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-auto-rows: 400px;
+        padding: 0px;
+    }
+
+    .catalog-item{
+        padding: auto;
+    }
+
+    .catalog-image {
+        width: 80%;
+        height: 80%; 
+    }
+
+    .catalog-image:hover{
+        transform: scale(1.1);
+        transition-duration: 1.2s;
+    }
+
+    .summary-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        row-gap: 0px;
+    }
+
+    .summary-item{
+        padding: 10px;
+        text-align: center;
+    }
+
+    .summary-item1{
+        grid-row: span 2;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .item-content {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .btn {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        position: absolute;
+        bottom: 20%;
+        right: 39%;
+        background-color: #ffffff;
+        border: 1px solid black;
+        padding: 3% 5%;
+        cursor: pointer;
+        margin-top: auto;
+        text-decoration: none; 
+        color: black;
+    }
+
+    .btn:hover{
+        background-color: #002032;
+        color: white;
+    }
+
+    .featured-container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+    }
+
+    .featured-item{
+        padding: auto;
+    }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: #f0f0f0;
+    }
+
+    .footer-item{
+        padding: auto;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    /* =====HEADER====== */
+
+    .header
+  {
+    background: #ffffff;
+    top : 23px;
+    height: 50px;
+    position: sticky;
+    z-index: 1000;
+  }
+
+  /* navbar */
+  .header ul 
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* container navbar */
+  .header ul li
+  {
+    list-style: none;
+    padding: 5px;
+    /* position: static; */
+  }
+
+  /* nav menu */
+  .header ul li a
+  {
+    color: #000000;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+  }
+
+  .header ul li a:hover
+  { 
+    background: #cbcbcb;
+  }
+
+  /* submenu */
+  .header ul li ul
+  {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    width: auto;
+    padding: 10px 2px;
+  }
+
+  .header ul li:hover ul
+  {
+    display: block;
+   
+  }
+    
+      /* Hamburger Menu */
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger-menu .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000000;
+      margin: 3px 0;
+    }
+
+
+    @media screen and (max-width: 768px) {
+
+        .hamburger-menu {
+          display: flex;
+          margin: 0px;
+          text-align: left;
+        }
+
+        /* Sembunyikan Menu Utama saat Hamburger Menu Aktif */
+        .header ul {
+            display: none;
+        }
+
+        /* Tampilkan Menu Utama saat Hamburger Menu Aktif */
+        .header ul.active {
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            position: relative;
+            text-align: left;
+            top: -50%;
+            left: -32%;
+            z-index: 1000;
+            width: 20%;
+        }
+        
+        /* submenu */
+        .header ul li ul{
+            text-align: left;
+            display: none;
+            /* saat ditekan, maka menu dibawahnya akan di overlay */
+            position: absolute; 
+            background: #ffffff;
+            width: auto;
+            padding: 10px 2px;
+        }
+
+
+        .summary-container {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+        }
+
+        .catalog-container {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            padding: 10px;
+        }
+
+        .catalog-item {
+            padding: 5px;
+        }
+
+        .featured-container {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+        }
+
+        .featured-item {
+            padding: auto;
+        }
+        
+    }
+
+    </style>
+    
+</head>
+<body>
+    <div style="position: sticky; top: 0px;z-index: 9999;">
+        <p style="background-color: black; color: white; text-align: center; font-style: italic; height: 25px; font-size: smaller;">
+            25% off the Mother's Day Shop with code: MD2024 | free exchanges and returns
+        </p>
+    </div>
+
+    <div class="header">
+
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <ul style="margin: 0 180px;" id="navMenu">
+            
+            <!-- <li><b style="font-size: 30px;">united by blue</b></li> -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <li class="nav-item">
+                <a href="#"><b>BAGS</b></a>
+                <ul class="submenu">
+                    <li><a href="#">Colections</a></li>
+                    <li><a href="https://unitedbyblue.com/collections/revolution-collection" target="_blank">(Re)volution</a></li>
+                    <li><a href="https://unitedbyblue.com/collections/reactive" target="_blank">(Re)active</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><b>ACCESSORIES</b></a>
+                <ul>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Bootles</a></li>
+                    <li><a href="#">Sock</a></li>
+                    <li><a href="#">Hats</a></li>
+                    <li><a href="#">Scrafes</a></li>
+                    <li><a href="#">Pets</a></li>
+                    <li><a href="#">Bison</a></li>
+                    <li><a href="#">Reusable</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><b>HOUSEHOLD</b></a>
+                <ul>
+                    <li><a href="#">Mugs</a></li>
+                    <li><a href="#">Cramics</a></li>
+                    <li><a href="#">Drinkware</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><b>APPAREL</b></a>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Outwear</a></li>
+                    <li><a href="#">Bison</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><b>MISSION</b></a>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Cleanups</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><b>SALE</b></a></li>
+            <li><img style="max-width: 65%; height: auto;" src="account-icon.png"></li>
+            <li><img style="max-width: 65%; height: auto;" src="search-icon.png"></li>
+            <li><img style="max-width: 65%; height: auto;" src="keranjang-icon.png"></li>
+        </ul>
+
+    </div>
+
+<main class="main-content">
+    <div class="summary-container" style="margin: 0px 180px;">
+        <div class="summary-item1">
+            <div class="item-content">
+                <a href="https://unitedbyblue.com/pages/mothers-day" class="btn"><b>SHOP NOW</b></a>
+                <img style="max-width: 100%; height: 100%; object-fit: cover; "
+            src="summary1.jpg">
+            </div>
+        </div>
+        <div class="summary-item">
+            <div class="item-content">
+                <a href="https://unitedbyblue.com/pages/sustainability" class="btn" style="right: 28%;"><b>LEARN MORE ABOUT OUR MISSION</b></a>
+                <img style="max-width: 100%; height: 100%; object-fit: cover;"
+            src="summary2.jpg">
+            </div>
+        </div>
+        <div class="summary-item">
+            <div class="item-content">
+                <a href="https://unitedbyblue.com/collections/best-sellers" class="btn"><b>SHOP NOW</b></a>
+                <img style="max-width: 100%; height: 100%; object-fit: cover;"
+            src="summary3.jpg">
+            </div>
+        </div>
+        
+    </div>
+
+    <h4 style="font-family: 'Times New Roman'; font-size: 36px; padding: auto; margin-left: 180px;">
+        Women's Apparel Sale
+    </h4>
+
+    <div class="catalog-container" style="margin: 0px 180px;">
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br><s>$129</s> $100<br>Color
+            </p1>
+        
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/close-up-futuristic-sneakers-showcase_23-2151005684.jpg?t=st=1715048632~exp=1715052232~hmac=de5b5a050329ac2508de400ad860b685f764100156b217dcb7f3ae5e3bc15a63&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/close-up-futuristic-sneakers-presentation_23-2151005714.jpg?t=st=1715048529~exp=1715052129~hmac=02543212ca35f33a3e2be08737cff6074c3ac6178d28f943c7d92446db537a68&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/close-up-person-wearing-futuristic-sneakers_23-2151005658.jpg?t=st=1715048561~exp=1715052161~hmac=ea41d17db385b12e58244b153c810e6c0169821f31ad741fe77df17571105faf&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/cool-roller-skate-still-life_23-2150304807.jpg?t=st=1715048591~exp=1715052191~hmac=560e599be852893aa3f23c47d0878f1c6ea787baccfbfc7b8be92a3f51696077&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+    </div>
+    
+    <div style="position: relative; right: 8%;">
+        <a href="https://unitedbyblue.com/collections/womens" class="btn" style="padding: 1.1% 2.7%; bottom: -45px;"><b>VIEW ALL</b></a>
+    </div>
+    
+    <h4 style="font-family: 'Times New Roman'; font-size: 36px; margin-left: 180px; margin-top: 100px;">
+        Top Selling Men's Apparel
+    </h4>
+
+    <div class="catalog-container" style="margin: 0px 180px;">
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+    </div>
+
+    <div style="position: relative; right: 8%;">
+        <a href="https://unitedbyblue.com/collections/mens" class="btn" style="padding: 1.1% 2.7%; bottom: -45px;"><b>VIEW ALL</b></a>
+    </div>
+
+    <img style="width: 100%; margin-top: 100px;"
+    src="campaign-image.png">
+
+
+    <h2 style="text-align: center; font-size: 38px;">
+        Our Featured Categories
+    </h2>
+
+    <div class="featured-container" style="margin-left: 180px;margin-right: 180px;">
+        <div class="featured-item"><img
+            style="height: 80%;"
+            src="featured-product.png">
+        </div>
+        <div class="featured-item"><img
+            style="height: 80%;"
+            src="featured-product.png">
+        </div>
+        <div class="featured-item"><img
+            style="height: 80%;"
+            src="featured-product.png">
+        </div>
+        <div class="featured-item"><img
+            style="height: 80%;"
+            src="featured-product.png">
+        </div>
+        <div class="featured-item"><img
+            style="height: 80%;"
+            src="featured-product.png">
+        </div>
+        <div class="featured-item"><img
+            style="height: 80%;"
+            src="featured-product.png">
+        </div>
+
+    </div>
+
+    <h2 style="text-align: left; font-size: 38px; margin-left: 180px;">
+        Best Sellers
+    </h2>
+
+    <div class="catalog-container" style="margin: 0px 180px;">
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+        <div class="catalog-item"><img
+            class="catalog-image"
+            src="https://img.freepik.com/free-photo/spring-wardrobe-switch-high-angle_23-2150264188.jpg?t=st=1714904556~exp=1714908156~hmac=345c080982f25faf47556562bbb4d0a5932a7e2a2c8cf59decad805fd96fc765&w=360">
+            <p1>
+                <br>Bison Zip-Up Jacket<br>$129<br>Color
+            </p1>
+        </div>
+    </div>
+
+    <div style="position: relative; right: 8%;">
+        <a href="https://unitedbyblue.com/collections/best-sellers" class="btn" style="padding: 1.1% 2.7%; bottom: -45px;"><b>VIEW ALL</b></a>
+    </div>
+
+    <img style="width: 100%; margin-top: 100px;"
+    src="campaign2-image.png">
+
+</main>
+
+<footer class="footer-container">
+    <div class="footer-item">ABOUT<br>Mission<br>Journal<br></div>
+    <div class="footer-item">INFO<br>FAQ<br>Shipping<br>Exchanges & Returns</div>
+    <div class="footer-item">OUR MISSION</div>
+    <div class="footer-item">SUBSCRIBE TO OUR EMAILS</div>
+
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.header ul');
+        menu.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
