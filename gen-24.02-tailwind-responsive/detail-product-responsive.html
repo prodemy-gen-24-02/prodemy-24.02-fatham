@@ -26,7 +26,7 @@
 
 
             <!-- Burger Menu -->
-            <button class="block md:hidden py-3 px-4 rounded focus:outline-none hover:bg-gray-200 group">
+            <button class="block md:hidden py-2 px-4 rounded focus:outline-none hover:bg-gray-200 group">
                 <div class="w-5 h-1 bg-gray-600 mb-1"></div>
                 <div class="w-5 h-1 bg-gray-600 mb-1"></div>
                 <div class="w-5 h-1 bg-gray-600"></div>
@@ -50,9 +50,10 @@
     <main>
         <div class="container mx-auto mt-12 px-4 py-8">
             <p>Home/Men's Apparel/Bison Ultralight Jacket</p>
-            <div class="grid grid-cols-1 mt-2 md:grid-cols-2 gap-8 bg-black-100">
+            <div class="grid grid-cols-1 mt-2 md:grid-cols-2 gap-8">
+                
                 <!-- Product Image -->
-                <div class="flex justify-center items-center">
+                <div class="flex justify-center items-center hover:scale-105">
                     <img src="https://unitedbyblue.com/cdn/shop/products/104-067-35125_smokyochre_9060.jpg?v=1675261754"
                         alt="Bison Ultralight Jacket" class="w-full max-md">
                 </div>
@@ -67,15 +68,29 @@
                     </div>
                     <p class="text-gray-700 mb-4">4 interest-free installments, or from $13.90/mo with shopPay</p>
                     <a href="#" class="underline">Check your purchasing power</a>
-                    <img src="star.png"><span>14 Reviews</span>
-                    <p class="text-gray-700 font-semibold">Color: Smoky Ochre</p>
-                    <img src="color.png">
-                    <p class="text-gray-700 mb-4 font-semibold">Size: L</p>
-                    <img src="size.png">
-                    <p class="text-gray-700 mb-4 font-semibold">Quantity</p>
                     
+                    <div class="flex items-center mt-4 mb-4">
+                        <img src="star.png"><span>14 Reviews</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <span class="bg-clip-border p-5 bg-amber-900 hover:outline "></span>
+                        <span class="bg-clip-border p-5 bg-black ml-5  hover:outline "></span>
+                        <span class="bg-clip-border p-5 bg-gray-400 ml-5  hover:outline "></span>
+                    </div>
+
+                    <p class="text-gray-700 mb-4 font-semibold">Size: </p>
+
+                    <div class="grid grid-cols-1 mt-2 md:grid-cols-5 mb-4">
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline">S</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline">M</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline">L</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline">XL</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline">XXL</button>
+                    </div>
+                                        
                     <form class="mb-4">
-                        <label for="quantity">Quantity (between 0 and 5) : </label>
+                        <label for="quantity">Quantity : </label>
                         <input type="number" id="quantity" name="quantity" min="0" max="5" />
                     </form>
 
