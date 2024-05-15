@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas Bangun Datar</title>
+</head>
+<body>
+    
+    <h1>Luas Bangun Datar</h1>
+
+    <h2>Pilih luas Bangun datar yang akan dihitung : </h2>
+    
+    <form>
+        <input type="radio" id="persegi" name="luas" value="Persegi" onclick="userInputs('Persegi')" />
+        <label for="persegi"> Luas Persegi </label><br>
+        <input type="radio" id="segitiga" name="luas" value="Segitiga" onclick="userInputs('Segitiga')"/>
+        <label for="segitiga"> Luas Segitiga </label><br>
+        <input type="radio" id="lingkaran" name="luas" value="Lingkaran" onclick="userInputs('Lingkaran')"/>
+        <label for="lingkaran"> Luas Lingkaran </label><br>
+    </form>
+
+    <div id="inputs"></div>
+
+    <button type="button" onclick="luas()">Hitung Luas</button>
+
+    <script src="luas.js"></script>
+
+</body>
+</html>
