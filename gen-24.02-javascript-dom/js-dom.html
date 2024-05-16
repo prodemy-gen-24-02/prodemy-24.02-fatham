@@ -54,15 +54,15 @@
                 
                 <!-- Product Image -->
                 <div class="items-center ">
-                    <img id="main-image" class="hover:scale-105" src="https://unitedbyblue.com/cdn/shop/products/104-067-35125_smokyochre_9060.jpg?v=1675261754"
+                    <img id="main-image" src="https://unitedbyblue.com/cdn/shop/products/104-067-35125_smokyochre_9060.jpg?v=1675261754"
                         alt="Bison Ultralight Jacket" class="w-full max-md">
 
                     <div class="grid grid-cols-3 gap-4 mt-4">
-                        <img class="opacity-50 hover:opacity-100" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3949.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3949.jpg?v=1675261754&width=1946"
+                        <img class="opacity-50 hover:opacity-100 hover:scale-105" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3949.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3949.jpg?v=1675261754&width=1946"
                         alt="Bison Ultralight Jacket">
-                        <img class="opacity-50 hover:opacity-100" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3906.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3906.jpg?v=1675261754&width=1946"
+                        <img class="opacity-50 hover:opacity-100 hover:scale-105" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3906.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3906.jpg?v=1675261754&width=1946"
                         alt="Bison Ultralight Jacket">
-                        <img class="opacity-50 hover:opacity-100" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_4002.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_4002.jpg?v=1675261754&width=1946"
+                        <img class="opacity-50 hover:opacity-100 hover:scale-105" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_4002.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_4002.jpg?v=1675261754&width=1946"
                         alt="Bison Ultralight Jacket">
                     </div>
 
@@ -89,20 +89,20 @@
                         <button class="bg-clip-border p-4 bg-gray-400 ml-5  hover:outline focus:outline focus:p-5 ease-in duration-200" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/104-067-03125_grey_9065.jpg?v=1675261754&width=1946')"></b>
                     </div>
 
-                    <p class="text-gray-700 mb-4 font-semibold">Size: <span id="text"></span> </p>
+                    <p class="text-gray-700 mb-4 font-semibold">Size: <span id="size"></span> </p>
 
                     <div class="grid grid-cols-1 mt-2 md:grid-cols-5 mb-4">
-                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('S')">S</button>
-                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('M')">M</button>
-                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('L')">L</button>
-                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('XL')">XL</button>
-                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('XXL')">XXL</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="getSize('S')">S</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="getSize('M')">M</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="getSize('L')">L</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="getSize('XL')">XL</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="getSize('XXL')">XXL</button>
                     </div>
                     
                     <p class="text-gray-700 mb-4 font-semibold">Quantity </p>
 
-                    <div id="quantity" class="flex items-center mb-4">
-                        <input
+                    <div class="flex items-center mb-4">
+                        <input onclick="checkSoldOut()"
                           type="number"
                           id="quantity"
                           name="quantity"
@@ -110,9 +110,10 @@
                           value="1"
                           class="py-2 px-3 border border-gray-300 rounded-md w-16 md:w-24 text-center focus:outline-cyan-300"
                         />
+                        <span class="ml-3 text-red-600">Only 5 left!</span>
                     </div>
 
-                    <button id="button" class="bg-black text-white py-3 w-full  hover:bg-gray-800 transition duration-300 mb-4"><span>Add to Cart</span> </button>
+                    <button id="cart" class="bg-black text-white py-3 w-full  hover:bg-gray-800 transition duration-300 mb-4" onclick="soldOut()"> <span id="cartText">Add to Cart</span></button>
                     
                     <p class="text-gray-700 mb-4 font-semibold">Details</p>
                     <p class="text-gray-700 mb-4 text-justify">Trust us, it’s warmer than it looks.This surprisingly lightweight jacket is designed to keep you comfortable in temps as low as -10°F. The secret’s in our signature BisonShield™ insulation: crafted with salvaged bison wool that we intercept from the waste stream. Equipped with a weather-resistant recycled polyester shell to keep you dry and warm while keeping trash out of landfills.</p>
@@ -147,8 +148,8 @@
                     <h3 class="ml-2 mt-2 font-semibold">EcoKnit™ Seamed Sweatshirt</h3>
                     <h3 class="ml-2"><span class="line-through text-gray-400">$88.00</span><span style="padding: 4px;">$62</span></h3>
                     <div class="flex items-center mb-4">
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-sky-400"></span>
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-red-200"></span>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-sky-400"></button>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-red-200"></button>
                     </div>
                 </div>
                 <div class="m-3">
@@ -159,8 +160,8 @@
                     <h3 class="ml-2 mt-2 font-semibold">Bison Ultralight Jacket</h3>
                     <h3 class="ml-2"><span class="line-through text-gray-400">$220.00</span><span style="padding: 4px;">$154</span></h3>
                     <div class="flex items-center mb-4">
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></span>
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-black"></span>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></button>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-black"></b>
                     </div>
                 </div>
                 <div class="m-3">
@@ -171,8 +172,8 @@
                     <h3 class="ml-2 mt-2 font-semibold">Quilted Funnel Neck Pullover</h3>
                     <h3 class="ml-2"><span class="line-through text-gray-400">$59.00</span><span style="padding: 4px;">$41</span></h3>
                     <div class="flex items-center mb-4">
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></span>
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-black"></span>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-red-600"></button>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-black"></button>
                     </div>
                 </div>
                 <div class="m-3">
@@ -183,8 +184,8 @@
                     <h3 class="ml-2 mt-2 font-semibold">Bison Ultralight Liner Jacket</h3>
                     <h3 class="ml-2"><span class="line-through text-gray-400">$228.00</span><span style="padding: 4px;">$160</span></h3>
                     <div class="flex items-center mb-4">
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></span>
-                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-black"></span>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></button>
+                        <button class="ml-2 mt-2 bg-clip-border p-3 bg-black"></button>
                     </div>
                 </div>
 
@@ -210,12 +211,34 @@
             document.getElementById('main-image').src = src;
         }
 
-        function changeText(x){
-            document.getElementById('text').textContent = x;
+        function getSize(x){
+            document.getElementById('size').textContent = x;
         }
 
-        function soldOut(x){
-            document.getElementById('button').textContent = x;
+        function soldOut(){
+            let btn = document.getElementById('cart');
+            btn.addEventListener("click", buttonCart); 
+            btn.addEventListener("click", notif);
+
+            function buttonCart(){
+                btn.classList = 'bg-slate-200 text-black py-3 w-full  hover:bg-gray-800 transition duration-300 mb-4';
+            }
+            function notif(){
+                alert("Berhasil ditambahkan kedalam Cart");
+            }
+        }
+
+        function checkSoldOut(){
+            let quality = document.getElementById('quantity').value;
+
+            if (quality > 5){
+                document.getElementById('cartText').textContent = 'Sold Out';
+                document.getElementById('cart').classList = 'bg-slate-200 text-black py-3 w-full hover:bg-gray-800 transition duration-300 mb-4';
+            } else {
+                document.getElementById('cartText').textContent = 'Add to Chart';
+                document.getElementById('cart').classList = 'bg-black text-white py-3 w-full hover:bg-gray-800 transition duration-300 mb-4';
+            }
+
         }
 
     </script>
