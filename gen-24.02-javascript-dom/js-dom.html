@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bison Ultralight Jacket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="fixed top-0 left-0 right-0 bg-white z-50">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-semibold">United By Blue</a>
+            <ul class="hidden md:flex flex space-x-6 item-center pr-10 text-base cursor-pointer">
+                <li><a href="#" class="px-4 py-6 bg-white hover:bg-gray-200 transition duration-300">BAGS</a></li>
+                <li><a href="#" class="px-4 py-6 bg-white hover:bg-gray-200 transition duration-300">ACCESSORIES</a></li>
+                <li><a href="#" class="px-4 py-6 bg-white hover:bg-gray-200 transition duration-300">HOUSEHOLD</a></li>
+                <li><a href="#" class="px-4 py-6 bg-white hover:bg-gray-200 transition duration-300">APPAREL</a></li>
+                <li><a href="#" class="px-4 py-6 bg-white hover:bg-gray-200 transition duration-300">MISSION</a></li>
+                <li><a href="#" class="px-4 py-6 bg-white hover:bg-gray-200 transition duration-300">SALE</a></li>
+            </ul>
+            <div class="hidden md:flex flex space-x-6">
+                <img src="Person.png">
+                <img src="Search.png">
+                <img src="Keranjang.png">
+            </div>
+
+
+            <!-- Burger Menu -->
+            <button class="block md:hidden py-2 px-4 rounded focus:outline-none hover:bg-gray-200 group">
+                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                <div class="w-5 h-1 bg-gray-600"></div>
+                <div class="absolute top-0 -right-full h-screen w-8/12 bg-white border opacity-0 group-focus:right-0 group-focus:opacity-100 transition-all duration-300">
+                    <ul>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full mt-12">BAGS</li>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full">ACCESSORIES</li>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full">HOUSEHOLD</li>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full">APPAREL</li>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full">MISSION</li>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full">SALE</li>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full">PERSON</li>
+                        <li class="hover::bg-gray-200 py-4 px-6 w-full">SHOPPING CART</li>
+                    </ul>
+
+                </div>
+            </button>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container mx-auto mt-12 px-4 py-8">
+            <p>Home/Men's Apparel/Bison Ultralight Jacket</p>
+            <div class="grid grid-cols-1 mt-2 md:grid-cols-2 gap-8">
+                
+                <!-- Product Image -->
+                <div class="items-center ">
+                    <img id="main-image" class="hover:scale-105" src="https://unitedbyblue.com/cdn/shop/products/104-067-35125_smokyochre_9060.jpg?v=1675261754"
+                        alt="Bison Ultralight Jacket" class="w-full max-md">
+
+                    <div class="grid grid-cols-3 gap-4 mt-4">
+                        <img class="opacity-50 hover:opacity-100" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3949.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3949.jpg?v=1675261754&width=1946"
+                        alt="Bison Ultralight Jacket">
+                        <img class="opacity-50 hover:opacity-100" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3906.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_3906.jpg?v=1675261754&width=1946"
+                        alt="Bison Ultralight Jacket">
+                        <img class="opacity-50 hover:opacity-100" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_4002.jpg?v=1675261754&width=1946')" src="https://unitedbyblue.com/cdn/shop/products/MENSBISONHOODEDULTRALIGHT_SMOKYOCHRE_104-067-35125_4002.jpg?v=1675261754&width=1946"
+                        alt="Bison Ultralight Jacket">
+                    </div>
+
+                </div>
+
+                <!-- Product Description -->
+                <div>
+                    <h6>United By Blue</h6>
+                    <h1 class="text-3xl font-semibold mb-4">Bison Ultralight Jacket</h1>
+                    <div class="flex items-center mb-4">
+                        <span class="text-xl text-gray-400 line-through tracking-wide">$220</span>
+                        <span class="text-xl text-gray-900 tracking-wide indent-2">$154</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">4 interest-free installments, or from $13.90/mo with shopPay</p>
+                    <a href="#" class="underline">Check your purchasing power</a>
+                    
+                    <div class="flex items-center mt-4 mb-4">
+                        <img src="star.png"><span>14 Reviews</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <button class="bg-clip-border p-4 bg-amber-900 hover:outline focus:outline focus:p-5 ease-in duration-200" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/104-067-35125_smokyochre_9060.jpg?v=1675261754')"></button>
+                        <button class="bg-clip-border p-4 bg-black ml-5  hover:outline focus:outline focus:p-5 ease-in duration-200" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/104-067-02625_black_9071.jpg?v=1675261754&width=1946')"></button>
+                        <button class="bg-clip-border p-4 bg-gray-400 ml-5  hover:outline focus:outline focus:p-5 ease-in duration-200" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/104-067-03125_grey_9065.jpg?v=1675261754&width=1946')"></b>
+                    </div>
+
+                    <p class="text-gray-700 mb-4 font-semibold">Size: <span id="text"></span> </p>
+
+                    <div class="grid grid-cols-1 mt-2 md:grid-cols-5 mb-4">
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('S')">S</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('M')">M</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('L')">L</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('XL')">XL</button>
+                        <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="changeText('XXL')">XXL</button>
+                    </div>
+                    
+                    <p class="text-gray-700 mb-4 font-semibold">Quantity </p>
+
+                    <div id="quantity" class="flex items-center mb-4">
+                        <input
+                          type="number"
+                          id="quantity"
+                          name="quantity"
+                          min="1"
+                          value="1"
+                          class="py-2 px-3 border border-gray-300 rounded-md w-16 md:w-24 text-center focus:outline-cyan-300"
+                        />
+                    </div>
+
+                    <button id="button" class="bg-black text-white py-3 w-full  hover:bg-gray-800 transition duration-300 mb-4"><span>Add to Cart</span> </button>
+                    
+                    <p class="text-gray-700 mb-4 font-semibold">Details</p>
+                    <p class="text-gray-700 mb-4 text-justify">Trust us, it’s warmer than it looks.This surprisingly lightweight jacket is designed to keep you comfortable in temps as low as -10°F. The secret’s in our signature BisonShield™ insulation: crafted with salvaged bison wool that we intercept from the waste stream. Equipped with a weather-resistant recycled polyester shell to keep you dry and warm while keeping trash out of landfills.</p>
+
+                    <ul class="ml-4 list-disc text-gray-700 list-outside mb-4 text-justify">
+                        <li>Features: packs up into travel pillow</li>
+                        <li>To avoid microplastic shedding in the wash, we recommend using a Guppyfriend Washing Bag</li>
+                        <li>100% recycled polyester, BisonShield™ insulation</li>
+                        <li>Evan is 6'3" wearing a size M in Black; Khayir is 6'2" wearing a size S in Boulder Grey and Smoky Ochre</li>
+                        <li>Machine wash cold, tumble dry low</li>
+                        <li>Made with love in Vietnam</li>
+
+                    </ul>
+                    
+                    <a href="#" class="underline mb-4">Men's Size Guide</a>
+
+                    <p>SHARE</p>
+
+                </div>
+                
+
+            </div>
+
+            <h2 class="text-2xl mt-24"><b>You may also like</b></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4">
+                <div class="m-3">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0287/3670/products/201360_FoxGlove00001_1.jpg?v=1675193507&width=533">
+                        <button class="absolute rounded-full bg-black text-white h-7 w-14 text-xs bottom-0 left-0 ml-3 mb-3">Sale</button>
+                    </div>
+                    <h3 class="ml-2 mt-2 font-semibold">EcoKnit™ Seamed Sweatshirt</h3>
+                    <h3 class="ml-2"><span class="line-through text-gray-400">$88.00</span><span style="padding: 4px;">$62</span></h3>
+                    <div class="flex items-center mb-4">
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-sky-400"></span>
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-red-200"></span>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0287/3670/products/WMNSULTRALIGHTPACKABLEJACKET_BLACK_204-037-02624_2818.jpg?v=1665086225&width=533">
+                        <button class="absolute rounded-full bg-black text-white h-7 w-28 text-xs bottom-0 left-0 ml-3 mb-3">Only 2 Left</button>
+                    </div>
+                    <h3 class="ml-2 mt-2 font-semibold">Bison Ultralight Jacket</h3>
+                    <h3 class="ml-2"><span class="line-through text-gray-400">$220.00</span><span style="padding: 4px;">$154</span></h3>
+                    <div class="flex items-center mb-4">
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></span>
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-black"></span>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0287/3670/products/201-306-26523.jpg?v=1678665438&width=533">
+                        <button class="absolute rounded-full bg-black text-white h-7 w-28 text-xs bottom-0 left-0 ml-3 mb-3">Only 1 Left</button>
+                    </div>
+                    <h3 class="ml-2 mt-2 font-semibold">Quilted Funnel Neck Pullover</h3>
+                    <h3 class="ml-2"><span class="line-through text-gray-400">$59.00</span><span style="padding: 4px;">$41</span></h3>
+                    <div class="flex items-center mb-4">
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></span>
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-black"></span>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0287/3670/products/104-066-25025_nightsky_1124.jpg?v=1678670466&width=533">
+                        <button class="absolute rounded-full bg-black text-white h-7 w-14 text-xs bottom-0 left-0 ml-3 mb-3">Sale</button>
+                    </div>
+                    <h3 class="ml-2 mt-2 font-semibold">Bison Ultralight Liner Jacket</h3>
+                    <h3 class="ml-2"><span class="line-through text-gray-400">$228.00</span><span style="padding: 4px;">$160</span></h3>
+                    <div class="flex items-center mb-4">
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-amber-900"></span>
+                        <span class="ml-2 mt-2 bg-clip-border p-3 bg-black"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <p>&copy; 2024 United By Blue. All rights reserved.</p>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-gray-300 transition duration-300">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-gray-300 transition duration-300">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-gray-300 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        function changeText(x){
+            document.getElementById('text').textContent = x;
+        }
+
+        function soldOut(x){
+            document.getElementById('button').textContent = x;
+        }
+
+    </script>
+
+</body>
+</html>
