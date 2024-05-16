@@ -89,7 +89,7 @@
                         <button class="bg-clip-border p-4 bg-gray-400 ml-5  hover:outline focus:outline focus:p-5 ease-in duration-200" onclick="changeImage('https://unitedbyblue.com/cdn/shop/products/104-067-03125_grey_9065.jpg?v=1675261754&width=1946')"></b>
                     </div>
 
-                    <p class="text-gray-700 mb-4 font-semibold">Size: <span id="size"></span> </p>
+                    <p class="text-gray-700 mb-4">Size: <span id="size" class="text-red-600">Please select size below</span> </p>
 
                     <div class="grid grid-cols-1 mt-2 md:grid-cols-5 mb-4">
                         <button class="bg-white m-2 px-6 py-1 rounded-2xl border border-black hover:outline focus:bg-black focus:text-white" onclick="getSize('S')">S</button>
@@ -235,7 +235,7 @@
                 document.getElementById('cartText').textContent = 'Sold Out';
                 document.getElementById('cart').classList = 'bg-slate-200 text-black py-3 w-full hover:bg-gray-800 transition duration-300 mb-4';
             } else {
-                document.getElementById('cartText').textContent = 'Add to Chart';
+                document.getElementById('cartText').textContent = 'Add to Cart';
                 document.getElementById('cart').classList = 'bg-black text-white py-3 w-full hover:bg-gray-800 transition duration-300 mb-4';
             }
 
