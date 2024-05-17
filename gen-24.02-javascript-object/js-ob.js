@@ -1,8 +1,8 @@
 const readline = require('readline');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
+const rl = readline.createInterface({ //interface untuk membaca dan menulis pada terminal
+    input: process.stdin, //membaca input
+    output: process.stdout //menampilkan output ke terminal
 });
 
 let cars = [{
@@ -17,12 +17,12 @@ function displayCars(){
 }
 
 function addCar() {
-    rl.question('Enter car type: ', (type) => {
+    rl.question('Enter car type: ', (type) => { //r1.question : menampilkan queri dgn menuliskan pada output, menunggu masukan user, lalu memanggil fungsi didalamnya dengan meneruskan input user sebagai argumen (yang diperlukan oleh fungsi didalamnya)
         rl.question('Enter car name: ', (name) => {
             rl.question('Enter car merk: ', (merk) => {
                 rl.question('Enter car engine: ', (engine) => {
-                    const newCar = { type, name, merk, engine };
-                    cars.push(newCar);
+                    const newCar = { type, name, merk, engine }; //create new obj
+                    cars.push(newCar); //push kedalam array obj
                     console.log("New car added:", newCar);
                     displayMenu();
                 });
@@ -34,13 +34,13 @@ function addCar() {
 function editCar() {
     displayCars();
     rl.question('Enter the index of the car you want to edit (index start at 0): ', (index) => {
-        index = parseInt(index);
+        index = parseInt(index); //konversi input dari terminal menjadi int
         if (isNaN(index) || index < 0 || index >= cars.length) {
             console.log("Invalid index.");
             displayMenu();
         } else {
             rl.question('Enter the property you want to edit (type, name, merk, engine): ', (property) => {
-                if (!['type', 'name', 'merk', 'engine'].includes(property)) {
+                if (!['type', 'name', 'merk', 'engine'].includes(property)) { //cek input user apakah ada dalam properti
                     console.log("Invalid property.");
                     displayMenu();
                 } else {
