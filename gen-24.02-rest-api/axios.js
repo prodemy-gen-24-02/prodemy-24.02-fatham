@@ -1,38 +1,50 @@
 
 //GET Mehtod
-const getAllPost = async () => {
+const getAllPosts = () => {
+    axios.get("https://dummyjson.com/comments")
+        .then(response => {
+
+            console.log(response);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+};
+
+
+//GET Mehtod by ID
+const getPostId = async (id) => {
     try {
-        const response = await axios.get("https://dummyjson.com/comments");
+        const response = await axios.get(`https://dummyjson.com/comments/${id}`);
+        await delay(5000);// Delay of 5 second
         console.log(response);
     } catch (error) {
         console.log(error);
     }
 }
 
-//getAllPost();
-
 
 //POST Method
 const mycomment = {
     body: "Awesome!",
-    postId : 3,
-    userId : 5,
+    postId: 3,
+    userId: 5,
 }
 
 const addNewComment = async (payload) => {
     try {
         const response = await axios.post('https://dummyjson.com/comments/add', payload);
         console.log(response);
-    } catch (error){
+    } catch (error) {
         console.log(error);
     }
 };
 
-//addNewComment(mycomment);
+
 
 //PUT Method
 const newComment = {
-    body : "This is more awesome",
+    body: "This is more awesome",
 }
 
 const updateMycomment = async (id, payload) => {
@@ -40,12 +52,10 @@ const updateMycomment = async (id, payload) => {
         const response = await axios.put(
             `https://dummyjson.com/comments/${id}`, payload);
         console.log(response);
-    } catch(error){
+    } catch (error) {
         console.log(error);
     }
 };
-
-//updateMycomment(5, newComment);
 
 
 //DELETE
@@ -54,9 +64,39 @@ const deleteMycomment = async (id) => {
         const response = await axios.put(
             `https://dummyjson.com/comments/${id}`);
         console.log(response);
-    } catch(error){
+    } catch (error) {
         console.log(error);
     }
 };
 
-deleteMycomment(5);
+const delay = (ms) => new Promise(resolve => {
+    console.log('wait...');
+    setTimeout(resolve, ms);
+});
+
+
+const runWithDelay = async () => {
+    try {
+
+        const allPosts = getAllPosts();
+        const postById = getPostId(1);
+
+        console.log("Fetching by id...");
+        console.log(postById); //wait 5 second
+
+        console.log("Fetching all posts..."); // tetap di eksekusi dahulu karena tidak ada await, berjalan secara asinkron
+        console.log(allPosts);
+
+        console.log("Add New Comment: ");
+        addNewComment(mycomment);
+        console.log("Update Comment: ");
+        updateMycomment(5, newComment);
+        console.log("Delete Comment: ");
+        deleteMycomment(5);
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+runWithDelay();
