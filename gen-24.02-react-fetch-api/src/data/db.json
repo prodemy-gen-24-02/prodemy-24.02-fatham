@@ -1,0 +1,77 @@
+{
+    "colors": {
+      "black": "bg-[#000000]",
+      "SteelBlue": "bg-[#4682b4]",
+      "BlueDark": "bg-[#1d2951]",
+      "pink": "bg-[#ffc0cb]",
+      "GreenForest": "bg-[#013220]",
+      "orange": "bg-[#c46210]"
+    },
+    
+    "sizes": {
+      "s": "S",
+      "m": "M",
+      "l": "L",
+      "xl": "XL",
+      "xxl": "XXL"
+    },
+
+    "products": [
+      {
+        "id": 1,
+        "name": "EcoKnit™ Seamed Sweatshirt",
+        "image": "https://cdn.shopify.com/s/files/1/0287/3670/products/201360_FoxGlove00001_1.jpg?v=1675193507&width=533",
+        "image2": "https://unitedbyblue.com/cdn/shop/products/201360_stoneblue00001.jpg?v=1675193507",
+        "thumbnail1": "https://unitedbyblue.com/cdn/shop/products/204-036-02623_WMNS_BISON_ULTRALIGHT_black6302.jpg?v=1679003851&width=1946",
+        "thumbnail2": "https://unitedbyblue.com/cdn/shop/products/204-036-03123_WMNS_BISON_ULTRALIGHT_boulder_Grey6295.jpg?v=1679003783&width=1946",
+        "originalPrice": 88.00,
+        "discountedPrice": 62.00,
+        "quantity": "SALE",
+        "color1": "SteelBlue",
+        "color2": "pink",
+        "link": "https://unitedbyblue.com/products/mens-bison-ultralight-vest?variant=39541581512776"
+      },
+      {
+        "id": 2,
+        "name": "Bison Ultralight Hooded Vest",
+        "image": "https://unitedbyblue.com/cdn/shop/products/WMNSBISONULTRALIGHTHOODEDVEST_NIGHTSKY_204-054-25024_0379.jpg?v=1676322146&width=1946",
+        "image2": "https://unitedbyblue.com/cdn/shop/products/WMNSBISONULTRALIGHTHOODEDVEST_FORESTFLOOR_204-054-34324_0065.jpg?v=1676322146&width=1946",
+        "thumbnail1": "https://unitedbyblue.com/cdn/shop/products/WMNSBISONULTRALIGHTHOODEDVEST_FORESTFLOOR_204-054-34324_0065.jpg?v=1676322146&width=1946",
+        "thumbnail2": "https://unitedbyblue.com/cdn/shop/products/WMNSBISONULTRALIGHTHOODEDVEST_FORESTFLOOR_204-054-34324_0090.jpg?v=1676322146&width=1946",
+        "originalPrice": 120.00,
+        "discountedPrice": 90.00,
+        "quantity": "Only 2 Left",
+        "color1": "GreenForest",
+        "color2": "BlueDark",
+        "link": "https://unitedbyblue.com/products/mens-bison-ultralight-vest?variant=39541581512776"
+      },
+      {
+        "id": 3,
+        "name": "Bison Ultralight Jacket",
+        "image": "https://unitedbyblue.com/cdn/shop/products/104-067-35125_smokyochre_9060.jpg?v=1675261754",
+        "image2": "https://unitedbyblue.com/cdn/shop/products/104-067-02625_black_9071.jpg?v=1675261754&width=1946",
+        "thumbnail1": "https://unitedbyblue.com/cdn/shop/products/104-067-02625_black_9071.jpg?v=1675261754",
+        "thumbnail2": "https://unitedbyblue.com/cdn/shop/products/104-067-03125_grey_9065.jpg?v=1675261754",
+        "originalPrice": 220.00,
+        "discountedPrice": 154.00,
+        "quantity": "Selling Fast",
+        "color1": "black",
+        "color2": "orange",
+        "link": "https://unitedbyblue.com/products/mens-bison-ultralight-vest?variant=39541581512776"
+      },
+      {
+        "id": 4,
+        "name": "Bison Ultralight Vest",
+        "image": "https://unitedbyblue.com/cdn/shop/products/MENSULTRALIGHTVESTFORESTFLOOR104-033-34325_8110.jpg?v=1675195436",
+        "image2": "https://unitedbyblue.com/cdn/shop/products/MENSULTRALIGHTVESTNIGHTSKY104-033-25025_9134.jpg?v=1678667755&width=1946",
+        "thumbnail1": "https://unitedbyblue.com/cdn/shop/products/MENSULTRALIGHTVESTFORESTFLOOR104-033-34325_8110.jpg?v=1675195436",
+        "thumbnail2": "https://unitedbyblue.com/cdn/shop/products/104-033-34324_4.jpg?v=1678667763",
+        "originalPrice": 148.00,
+        "discountedPrice": 104.00,
+        "quantity": "Selling Fast",
+        "color1": "BlueDark",
+        "color2": "GreenForest",
+        "link": "https://unitedbyblue.com/products/mens-bison-ultralight-vest?variant=39541581512776"
+      }
+    ]
+  }
