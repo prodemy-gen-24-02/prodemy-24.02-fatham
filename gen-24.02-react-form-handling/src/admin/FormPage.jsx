@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import NavbarAdmin from "./NavbarAdmin";
 
 
 // Validation schema
@@ -43,16 +44,17 @@ const FormPage = () => {
   };
 
   return (
-    <div className="mt-8">
-      <h2 className="text-xl font-bold mb-4">Add New Product</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-2 gap-4">
+    <div className="">
+      <NavbarAdmin/>
+      <h2 className="ml-64 text-xl font-bold mb-4 bg-sky-200 py-2 rounded">Add New Product</h2>
+      <form className="ml-64" onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid grid-cols-1 gap-2">
           <div>
             <input
               type="text"
               placeholder="Name"
               {...register("name")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.name && (
               <div className="text-red-500">{errors.name.message}</div>
@@ -63,7 +65,7 @@ const FormPage = () => {
               type="text"
               placeholder="Image URL"
               {...register("image")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.image && (
               <div className="text-red-500">{errors.image.message}</div>
@@ -74,7 +76,7 @@ const FormPage = () => {
               type="number"
               placeholder="Original Price"
               {...register("originalPrice")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.originalPrice && (
               <div className="text-red-500">{errors.originalPrice.message}</div>
@@ -85,7 +87,7 @@ const FormPage = () => {
               type="number"
               placeholder="Discounted Price"
               {...register("discountedPrice")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.discountedPrice && (
               <div className="text-red-500">{errors.discountedPrice.message}</div>
@@ -96,7 +98,7 @@ const FormPage = () => {
               type="text"
               placeholder="Quantity"
               {...register("quantity")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.quantity && (
               <div className="text-red-500">{errors.quantity.message}</div>
@@ -107,7 +109,7 @@ const FormPage = () => {
               type="text"
               placeholder="Color1"
               {...register("color1")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.color1 && (
               <div className="text-red-500">{errors.color1.message}</div>
@@ -118,7 +120,7 @@ const FormPage = () => {
               type="text"
               placeholder="Color2"
               {...register("color2")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.color2 && (
               <div className="text-red-500">{errors.color2.message}</div>
@@ -129,17 +131,17 @@ const FormPage = () => {
               type="text"
               placeholder="Link"
               {...register("link")}
-              className="border px-4 py-2"
+              className="border px-4 py-2 w-9/12 text-center rounded"
             />
             {errors.link && (
               <div className="text-red-500">{errors.link.message}</div>
             )}
           </div>
         </div>
-        <div className="mt-4">
-          <h3 className="text-lg font-bold mb-2">Additional Images</h3>
+        <div className="mt-8">
+          <h3 className="text-s mb-2 bg-sky-100 py-2 rounded mx-28">Additional Images for Product</h3>
           {fields.map((field, index) => (
-            <div key={field.id} className="flex space-x-2 mb-2">
+            <div key={field.id} className="flex space-x-2 mb-2 place-content-center">
               <div>
                 <input
                   type="text"
